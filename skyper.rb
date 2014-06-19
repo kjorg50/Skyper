@@ -173,12 +173,18 @@ def skyper(text, emoticon)
 (#{@exp})(#{@exp})(#{@exp})(#{@exp})(#{@exp})
       (#{@exp})     (#{@exp})\n\n"
 
+  @exclam = "         (#{@exp})
+         (#{@exp})
+         (#{@exp})
+         (#{@exp})
+
+         (#{@exp})"
   #@test = "hello #{@exp}"
 
 
   @alphabet = {'a'=>@a, 'b'=>@b, 'c'=>@c, 'd'=>@d, 'e'=>@e, 'f'=>@f, 'g'=>@g, 'h'=>@h, 'i'=>@i, 'j'=>@j, 'k'=>@k, 'l'=>@l, 'm'=>@m, 'n'=>@n,
               'o'=>@o, 'p'=>@p, 'q'=>@q, 'r'=>@r, 's'=>@s, 't'=>@t, 'u'=>@u, 'v'=>@v, 'w'=>@w, 'x'=>@x, 'y'=>@y, 'z'=>@z, ' '=>@space, '?'=>@q_mark, 
-              '#'=>@hash}
+              '#'=>@hash, '!'=>@exclam }
   @alphabet.default = ""
 
   @result = ""
@@ -190,5 +196,5 @@ def skyper(text, emoticon)
 end
 
 #skyper( text_input, emoticon )
-skyper("cool", "smile")
+skyper("usa!", "flag:us")
 
