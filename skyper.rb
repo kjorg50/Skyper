@@ -178,7 +178,7 @@ def skyper(text, emoticon)
          (#{@exp})
          (#{@exp})
 
-         (#{@exp})"
+         (#{@exp})\n\n"
   #@test = "hello #{@exp}"
 
 
@@ -196,5 +196,5 @@ def skyper(text, emoticon)
 end
 
 #skyper( text_input, emoticon )
-skyper("usa!", "flag:us")
+skyper("yo", "pizza")
 
