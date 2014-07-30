@@ -1,3 +1,6 @@
+# Author: Kyle Jorgensen
+# Skyper - A fun program for writing emoticon words in skype
+
 def skyper(text, emoticon)
   @exp = emoticon
   @text = text.downcase
@@ -195,6 +198,12 @@ def skyper(text, emoticon)
   print @result
 end
 
-#skyper( text_input, emoticon )
-skyper("yo", "pizza")
+puts "Enter the text you want to write: "
+text_input = gets.chomp
+puts "Enter the emoticon you want to use: "
+emoticon_input = gets.chomp
+puts "\n"
+
+skyper(text_input, emoticon_input)
+
 
