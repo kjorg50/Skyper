@@ -6,7 +6,7 @@ A simple program to write words with Skype emoticons.
  
 You can pass in values from the command line, or enter them at the prompt, and the result will be copied to your clipboard. 
 
-```ruby skyper.rb <text_input> <emoticon_name>```
+```> ruby skyper.rb <text_input> <emoticon_name>```
 
 An example of this would be 
 
