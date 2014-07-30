@@ -1,6 +1,8 @@
 # Author: Kyle Jorgensen
 # Skyper - A fun program for writing emoticon words in skype
 
+require 'clipboard'
+
 def skyper(text, emoticon)
   @exp = emoticon
   @text = text.downcase
@@ -195,15 +197,24 @@ def skyper(text, emoticon)
     @result += @alphabet[c]
   end
 
-  print @result
+  return @result
 end
 
-puts "Enter the text you want to write: "
-text_input = gets.chomp
-puts "Enter the emoticon you want to use: "
-emoticon_input = gets.chomp
+# If there are no command line args then prompt the user
+if ARGV.length == 0
+  puts "Enter the text you want to write: "
+  text_input = gets.chomp
+  puts "Enter the emoticon you want to use: "
+  emoticon_input = gets.chomp
+
+elsif ARGV.length == 2 # otherwise take cmd line args
+
+  text_input = ARGV[0]
+  emoticon_input = ARGV[1]
+end
+
 puts "\n"
-
-skyper(text_input, emoticon_input)
-
+result = skyper(text_input, emoticon_input)
+Clipboard.copy(result)
+puts "*** Your text has been copied to the clipboard ***"
 

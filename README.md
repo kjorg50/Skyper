@@ -1,11 +1,29 @@
 # Skyper
 
+A simple program to write words with Skype emoticons.
+
 ## How to run
  
-In the skyper.rb file, change the last line of the file to have the text you want to print as the first parameter, and the 
-skype emoticon as the second parameter. Then, in a terminal execute the script as follows
+You can pass in values from the command line, or enter them at the prompt, and the result will be copied to your clipboard. 
 
-```ruby skyper.rb > out.txt```
+```ruby skyper.rb <text_input> <emoticon_name>```
 
-Finally, copy the contents of your output file to Skype
+An example of this would be 
 
+```> ruby skyper.rb kyle cool```
+
+or you could enter them at the prompt, like so
+
+```
+> ruby skyper.rb
+Enter the text you want to write: 
+kyle
+Enter the emoticon you want to use: 
+cool
+```
+
+Either way produces a result which looks like this when pasted into skype
+
+![](http://i.imgur.com/Y8LXdkv.png)
+
+Enjoy!
