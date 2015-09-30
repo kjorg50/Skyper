@@ -8,10 +8,10 @@ def skyper(text, emoticon)
   @text = text.downcase
 
   @a = "       (#{@exp})
-     (#{@exp})(#{@exp})
+    (#{@exp}) (#{@exp})
   (#{@exp})(#{@exp})(#{@exp})
- (#{@exp})         (#{@exp})
-(#{@exp})           (#{@exp})\n\n"
+ (#{@exp})        (#{@exp})
+(#{@exp})          (#{@exp})\n\n"
 
   @b = "(#{@exp})(#{@exp})(#{@exp})
 (#{@exp})         (#{@exp})
@@ -152,10 +152,10 @@ def skyper(text, emoticon)
 (#{@exp})             (#{@exp})\n\n"
 
   @y = "(#{@exp})       (#{@exp})
-  (#{@exp})   (#{@exp})
-   (#{@exp})(#{@exp})
-      (#{@exp})
-      (#{@exp})\n\n"
+  (#{@exp})    (#{@exp})
+    (#{@exp})(#{@exp})
+       (#{@exp})
+       (#{@exp})\n\n"
 
   @z = "(#{@exp})(#{@exp})(#{@exp})(#{@exp})
             (#{@exp})
