@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Author: Kyle Jorgensen
 # Skyper - A fun program for writing emoticon words in skype
 
@@ -200,21 +202,22 @@ def skyper(text, emoticon)
   return @result
 end
 
-# If there are no command line args then prompt the user
-if ARGV.length == 0
-  puts "Enter the text you want to write: "
-  text_input = gets.chomp
-  puts "Enter the emoticon you want to use: "
-  emoticon_input = gets.chomp
+if __FILE__ == $PROGRAM_NAME
+  # If there are no command line args then prompt the user
+  if ARGV.length == 0
+    puts "Enter the text you want to write: "
+    text_input = gets.chomp
+    puts "Enter the emoticon you want to use: "
+    emoticon_input = gets.chomp
 
-elsif ARGV.length == 2 # otherwise take cmd line args
+  elsif ARGV.length == 2 # otherwise take cmd line args
 
-  text_input = ARGV[0]
-  emoticon_input = ARGV[1]
+    text_input = ARGV[0]
+    emoticon_input = ARGV[1]
+  end
+
+  puts "\n"
+  result = skyper(text_input, emoticon_input)
+  Clipboard.copy(result)
+  puts "*** Your text has been copied to the clipboard ***"
 end
-
-puts "\n"
-result = skyper(text_input, emoticon_input)
-Clipboard.copy(result)
-puts "*** Your text has been copied to the clipboard ***"
-
